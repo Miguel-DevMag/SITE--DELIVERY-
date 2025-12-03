@@ -2,7 +2,7 @@
     --bg-color: #ff8863;
     --bg-hover: #ff1e00;
     --color-avaliacao: #ff9443;
-    --border-bottom: 1px solid #ffdfab;
+    --border: 1px solid #ff886a;
 }
 * {
     margin: 0;
@@ -21,7 +21,7 @@ body {
 }
 
 .header {
-    border-bottom: var(--border-bottom);
+    border-bottom: var(--border);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -108,7 +108,7 @@ body {
     border-radius: 10px;
     width: 600px;
     height: auto;
-    box-shadow: -1px -1px 38px 1px rgba(253, 145, 145, 0.41);
+    box-shadow: -1px -1px 20px 1px rgba(253, 145, 145, 0.41);
 }
 .hero-buttons {
     display: flex;
@@ -132,4 +132,65 @@ body {
     font-size: 1rem;
     color: #555555;
     font-weight: 500;
+}
+.cardapio h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.text-des {
+    font-size: 300;
+    text-align: center;
+    line-height: 2.3;
+}
+
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.menu-grid li {
+   position: relative;
+   background-color: #fff;
+   border: var(--border);
+   flex-direction: column;
+   overflow: hidden;
+   text-align: left;
+   border-radius: 8px;
+   box-shadow: rgba(0, 0, 0, 0.25) 0px 40px 40px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 2px 2px, rgba(0, 0, 0, 0.17) 0px 9px 11px, rgba(0, 0, 0, 0.09) 0px -2px 2px;
+}
+
+
+.menu-grid li img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+} 
+
+.badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: var(--bg-hover);
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.badge:hover {
+    color: #fff;
+    background-color: #ff1e00c9;
+}
+
+.menu-grid h3 {
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 700;
 }
